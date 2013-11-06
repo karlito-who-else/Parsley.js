@@ -1,4 +1,4 @@
-﻿#Parsley.js
+#Parsley.js
 
 [![Build Status](https://travis-ci.org/guillaumepotier/Parsley.js.png?branch=master)](https://travis-ci.org/guillaumepotier/Parsley.js)
 
@@ -37,8 +37,8 @@ jQuery 1.6+
 
 You'll need ruby, and Google Closure compiler: `gem install closure-compiler`. Then, just call:
 
-* Linux/Mac: `./bin/build.sh version` where version is the build release. eg: `./bin/build.sh 1.1.2`
-* Windows: `./bin/build.ps1 version` where version is the build release. eg: `./bin/build.ps1 1.1.2`
+* Linux/Mac: `./bin/build.sh version` where version is the build release. eg: `./bin/build.sh 1.1.18`
+* Windows: `./bin/build.ps1 version` where version is the build release. eg: `./bin/build.ps1 1.1.18`
 
 They'll be created and dumped in the dist/ directory
 

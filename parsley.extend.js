@@ -96,6 +96,36 @@ window.ParsleyConfig = window.ParsleyConfig || {};
         }
         return day > 0 && day <= monthLength[month - 1];
       }
+
+      , password: function ( val, elem, self) {
+        var hasNumbers = /\d/,
+            $message = "",
+            hasLCLetters = /[a-z]/,
+            hasUCLetters = /[A-Z]/,
+            valid = true;
+        if( this.minlength(val,6) === false ) {
+          valid = false;
+          $message = "This value is too short. It should have 6 characters or more.";
+        }
+        if( val.match(hasNumbers) === null ) {
+          valid = false;
+          $message = "This value must contain one or more Number's";
+        }
+        if( val.match(hasLCLetters) === null ) {
+          valid = false;
+          $message = "This value must contain one or more lowercase letters";
+        }
+        if( val.match(hasUCLetters) === null ) {
+          valid = false;
+          $message = "This value must contain one or more uppercase letters";
+        }
+        if($("ul.parsley-error-list li.password",$(self.$element).parent()).length > 0) {
+          $("ul.parsley-error-list li.password",$(self.$element).parent()).html($message);
+        }
+        self.Validator.messages['password'] = $message;
+
+        return valid;
+      }
     }
     , messages: {
         minwords:       "This value should have %s words at least."
@@ -106,7 +136,8 @@ window.ParsleyConfig = window.ParsleyConfig || {};
       , beforedate:     "This date should be before %s."
       , afterdate:      "This date should be after %s."
       , luhn:           "This value should pass the luhn test."
-      , americandate:	"This value should be a valid date (MM/DD/YYYY)."
+      , americandate:   "This value should be a valid date (MM/DD/YYYY)."
+      , password:       "This value should have more zest."
     }
   });
 }(window.jQuery || window.Zepto));
