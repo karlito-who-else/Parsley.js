@@ -105,11 +105,11 @@ window.ParsleyConfig = window.ParsleyConfig || {};
             valid = true;
         if( this.minlength(val,6) === false ) {
           valid = false;
-          $message = "This value is too short. It should have 6 characters or more.";
+          $message = "This value is too short, it should have 6 characters or more";
         }
         if( val.match(hasNumbers) === null ) {
           valid = false;
-          $message = "This value must contain one or more Number's";
+          $message = "This value must contain one or more numbers";
         }
         if( val.match(hasLCLetters) === null ) {
           valid = false;
@@ -128,16 +128,16 @@ window.ParsleyConfig = window.ParsleyConfig || {};
       }
     }
     , messages: {
-        minwords:       "This value should have %s words at least."
-      , maxwords:       "This value should have %s words maximum."
-      , rangewords:     "This value should have between %s and %s words."
-      , greaterthan:    "This value should be greater than %s."
-      , lessthan:       "This value should be less than %s."
-      , beforedate:     "This date should be before %s."
-      , afterdate:      "This date should be after %s."
-      , luhn:           "This value should pass the luhn test."
-      , americandate:   "This value should be a valid date (MM/DD/YYYY)."
-      , password:       "This value should have more zest."
+        minwords:       "This value should have %s words at least"
+      , maxwords:       "This value should have %s words maximum"
+      , rangewords:     "This value should have between %s and %s words"
+      , greaterthan:    "This value should be greater than %s"
+      , lessthan:       "This value should be less than %s"
+      , beforedate:     "This date should be before %s"
+      , afterdate:      "This date should be after %s"
+      , luhn:           "This value should pass the luhn test"
+      , americandate:   "This value should be a valid date (MM/DD/YYYY)"
+      , password:       "This value should have more zest"
     }
   });
 }(window.jQuery || window.Zepto));
